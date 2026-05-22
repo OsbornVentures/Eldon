@@ -1,0 +1,41 @@
+[
+  {
+    "id": "linkedin-morning-adds",
+    "name": "LinkedIn morning adds",
+    "prompt": "Use browser automation to add 50 connections on LinkedIn. Use human_pace=True. Navigate to /mynetwork/grow, find Connect buttons, add 50 people with relevant backgrounds (AI, tech, devops). Stop after 50 or 45 minutes whichever comes first. Log results to memory.",
+    "cron": "0 3 * * 1-5",
+    "enabled": false,
+    "max_turns": 80,
+    "wiggum": false,
+    "last_run": null,
+    "next_run": "2026-05-14T03:00:00+00:00",
+    "created": "2026-05-13T23:13:39Z",
+    "note": "DISABLED \u2014 browser_act not tested live yet. Enable after manual test via run_task.py."
+  },
+  {
+    "id": "ai-news-facebook-post",
+    "name": "AI news Facebook post",
+    "prompt": "Search for recent AI news (model releases, Claude/GPT/hardware/PC). Pick one interesting article published today or yesterday. Open Facebook, post it with a brief 2-sentence commentary. Use human_pace=True. Log what was posted to memory.",
+    "cron": "0 9 * * 1-5",
+    "enabled": false,
+    "max_turns": 30,
+    "wiggum": false,
+    "last_run": null,
+    "next_run": "2026-05-14T09:00:00+00:00",
+    "created": "2026-05-13T23:13:39Z",
+    "note": "DISABLED \u2014 browser_act not tested live yet. Enable after manual test via run_task.py."
+  },
+  {
+    "id": "test-task-smoke",
+    "name": "test-task-smoke",
+    "prompt": "Call topo, then done.",
+    "cron": "0 9 * * 1-5",
+    "enabled": true,
+    "max_turns": 30,
+    "wiggum": false,
+    "last_run": null,
+    "next_run": "2026-05-21T09:00:00+00:00",
+    "created": "2026-05-20T19:50:23Z",
+    "updated": "2026-05-20T20:07:38Z"
+  }
+]

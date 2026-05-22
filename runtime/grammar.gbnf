@@ -1,0 +1,14 @@
+root        ::= "<tool>" tool-name "</tool>\n<args>" json-object "</args>\n<reason>" reason "</reason>"
+tool-name   ::= "browser_act" | "browser_close" | "browser_dom" | "browser_nav" | "browser_open" | "browser_shot" | "code_run" | "ctx_compress" | "doc_chunk" | "doc_parse" | "done" | "ebay_list" | "fs_list" | "fs_read" | "fs_write" | "goal_check" | "goal_plan" | "grep" | "http_call" | "lint_code" | "loop_close" | "loop_open" | "loop_update" | "memory_list" | "memory_recall" | "memory_store" | "price_lookup" | "roadmap_chunk" | "shell" | "site_scaffold" | "skill_make" | "skill_validate" | "task_list" | "task_schedule" | "topo" | "upc_lookup" | "weather" | "web_fetch" | "web_search"
+json-object ::= "{}" | "{" pair ("," pair)* "}"
+pair        ::= "\"" key "\":" value
+key         ::= [a-z_]{1,24}
+value       ::= string | integer | boolean | null | array | nested-obj
+string      ::= "\"" char* "\""
+char        ::= [^\x00-\x1f"\\] | "\\\\" | "\\\""  | "\\n" | "\\r" | "\\t"
+integer     ::= "-"? [0-9]{1,9}
+boolean     ::= "true" | "false"
+null        ::= "null"
+array       ::= "[]" | "[" value ("," value){0,15} "]"
+nested-obj  ::= "{}" | "{" pair ("," pair){0,7} "}"
+reason      ::= [^<]{1,400}

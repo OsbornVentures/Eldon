@@ -1,0 +1,38 @@
+# Windows-compatible commands for shell tool
+# --- SYSTEM INFO ---
+hostname
+whoami
+ipconfig
+systeminfo
+tasklist
+wmic
+# --- FILE OPERATIONS ---
+dir
+ls
+type
+cat
+mkdir
+copy
+cp
+move
+mv
+where
+# --- DATA PROCESSING & SEARCH ---
+findstr
+grep
+rg
+jq
+echo
+# --- NETWORK ---
+curl
+ping
+net
+# --- EXECUTION & DEPLOYMENT ---
+python
+pip
+git
+# --- MODEL ADDITIONS ---
+uptime
+sed
+awk
+lsof

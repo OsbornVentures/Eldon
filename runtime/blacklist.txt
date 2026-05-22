@@ -1,0 +1,42 @@
+# DESTRUCTIVE COMMANDS
+\brm\b
+\bdel\b.*\/[sS]
+\brd\b.*\/[sS]
+\bformat\b
+\bdd\b
+\bmkfs
+
+# PRIVILEGE ESCALATION & AUTH
+\bsudo\b
+\bsu\b
+\bchmod\b
+\bchown\b
+\bnet\s+user\b
+\bwhoami\s+/priv
+
+# SYSTEM CONTROL
+\bshutdown\b
+\breboot\b
+\bhalt\b
+\bpoweroff\b
+\bkill\b
+\btaskkill\s+/f
+
+# PERSISTENCE & REGISTRY
+\breg\s+(delete|add)\b
+\bschtasks.*\/create\b
+
+# NETWORK EXFILTRATION & SHELL ESCAPES
+\bpowershell\b.*-[eE]nc
+\bmount\b
+\bumount\b
+\biptables\b
+\bnft\b
+>\s*/dev/
+\|\s*(sh|bash|zsh|fish)\b
+curl[^|]*\|
+wget[^|]*\|
+&&|;|\$\(|`
+
+# PREVENTING "AI SUICIDE" (Recursive deletion)
+\brmdir\b.*\/[sS]
