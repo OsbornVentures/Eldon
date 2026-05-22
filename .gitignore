@@ -1,0 +1,36 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Runtime state (machine-specific, not portable)
+runtime/TOPO.cache
+runtime/scheduler.stop
+runtime/doc_cache/
+runtime/browser_sessions/
+runtime/manifests/
+
+# Logs
+logs/
+
+# Agent state files
+STATE.md
+OPEN_LOOPS.md
+CHECKLIST.md
+TOOLS.md
+
+# Memory database
+memory_db/
+
+# Learned tools (written by skill_make at runtime)
+tools/learned/*.py
+
+# Launcher temp files
+launcher/*.bat
+
+# Model files
+*.gguf
+
+# OS
+.DS_Store
+Thumbs.db

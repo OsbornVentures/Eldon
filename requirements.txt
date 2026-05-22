@@ -1,0 +1,18 @@
+# Core — required for proxy and tool loop
+flask
+requests
+chromadb
+
+# Scheduler
+croniter
+
+# Browser automation
+playwright
+# After install: python -m playwright install chromium
+
+# Document parsing
+docling
+# Heavy install (~2GB). Skip if not parsing PDFs/DOCX.
+
+# Optional: Linux/macOS RAM stats in topo
+# psutil
